@@ -1,0 +1,392 @@
+
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Kaushan+Script|Mr+De+Haviland);
+
+body
+{
+	background-image: url("../img/background.jpg");
+}
+
+/*Titre*/
+
+h4
+{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 3em;
+	line-height: 30px;
+	margin :0;
+	text-shadow: 1px 1px 1px #000000;
+	color : #f5f5f5;
+}
+h5
+{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 1.5em;
+	line-height: 30px;
+	margin :0;
+	text-shadow: 1px 1px 1px #FFFFFF;
+}
+
+/*Surcharge Bootstrap*/
+.btn.disabled, 
+.btn[disabled], 
+fieldset[disabled] .btn 
+{
+	cursor : default;
+}
+
+
+.navbar-brand
+{
+
+}
+#hbar-title
+{
+	padding: 10px;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 2.5em;
+	text-shadow: 1px 1px 1px #000;
+}
+#hbar-title img
+{
+	width: 32px;
+}
+
+#hbar, /*Barre du haut horizontale*/
+#hbar-menu > li > a, /* Menu barre du haut*/
+#hbar-title, /*Titre barre du haut*/
+#vbar, /*Barre de gauche verticale*/
+#vbar ul li a, /*Elements de la barre vertical*/
+#elements_bottom 
+{
+	background-color: transparent;
+	color: #F5F5F5;
+}
+
+.opacity
+{
+	background-color: rgba(255,255,255,0.3);
+}
+
+.panel-background
+{
+	min-height: 100%;
+}
+
+/*Contenu de la page*/
+#page-wrapper
+{
+
+	height: 100%;
+	/*background-color: rgba(255,255,255,0.15);*/
+	background-color: transparent;
+}
+
+/*Icone menu hamburger*/
+.navbar-toggle
+{
+	border: 1px solid #F5F5F5;
+	color : #F5F5F5;
+}
+.navbar-toggle .icon-bar
+{
+	border-top: 2px solid #F5F5F5;
+}
+
+#hbar-menu > li > a:hover,
+#hbar-menu > li > a:focus,
+html, body
+{
+	height: 100%
+}
+
+#hbar-title:hover,
+#hbar-menu > li > a:hover,
+#hbar-menu > li > a:focus,
+#vbar ul li a:hover,
+#vbar ul li a:focus,
+#vbar ul li a.active,
+.navbar-toggle:hover,
+.navbar-toggle:focus
+
+{
+	background-color: rgba(35, 40, 45, 0.3);
+	outline: 0;
+}
+
+#vbar ul li a /*Menu vertical*/
+{
+	font-weight: bold;
+}
+
+#elements_bottom
+{
+	padding-top: 10px;
+}
+
+/*Suppression des padding*/
+.no-margin
+{
+	padding : 0;
+	margin : 0;
+} 
+
+/*Maximum de hauteur*/
+.max-height
+{
+	height: 100%;
+}
+
+/*Alignement à droite*/
+.align-right
+{
+	float:right;
+}
+
+/*Element flexible*/
+.flexible
+{
+	display : flex;
+}
+
+/*Panneau d'édition & de liste*/
+#bloc-note-list
+{
+	z-index: 1;
+}
+
+/*Panneau list des notes*/
+#panel-note-list /*51px + content + 31px*/
+{
+
+	height: -moz-calc(100% - 100px);
+    height: -webkit-calc(100% - 100px);
+    height: -o-calc(100% - 100px);
+    height: calc(100% - 100px);
+	box-shadow: 0 0 10px #23282d;
+	margin-top: 50px;
+	margin-left: -0px;
+}
+
+#panel-note-list .panel-heading
+{
+	
+}
+
+/*Hauteur du footer*/
+#panel-note-list .panel-footer
+{
+	height: 31px;
+	color: #959595;
+	font-size: 0.95em;
+	line-height: 31px;
+	padding: 0 15px;
+	text-align: right;
+}
+
+/*Hauteur du body*/
+#panel-note-list .panel-body
+{
+	width: 100%;
+	height: -moz-calc(100% - 82px);
+    height: -webkit-calc(100% - 82px);
+    height: -o-calc(100% - 82px);
+    height: calc(100% - 82px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*Panneau contenu des notes*/
+#note-content
+{
+	z-index : 0;
+}
+#note-content .well
+{
+    height: -moz-calc(100% - 10px);
+    height: -webkit-calc(100% - 10px);
+    height: -o-calc(100% - 10px);
+    height: calc(100% - 10px);
+	margin-top : 5px;
+	margin-left: -5px;
+	padding-left: 25px;
+}
+
+
+/* 
+ ___  _                        
+|_ _|| |_  ___  _ __ ___   ___ 
+ | | | __|/ _ \| '_ ` _ \ / __|
+ | | | |_|  __/| | | | | |\__ \
+|___| \__|\___||_| |_| |_||___/
+
+*/
+/*Bloc contenant les items*/
+.items-list
+{
+	
+}
+/*Un item*/
+.item-wrapper
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ECECEC;
+	cursor: pointer;
+}
+.item-wrapper:nth-of-type(2n+1)
+{
+	background-color: #f9f9f9;
+}
+.item-wrapper:hover
+{
+	background-color: #f5f5f5;
+}
+.item-wrapper-disabled
+{
+	background-color: transparent;
+	cursor: default;
+}
+
+/*Ligne à l'intérieur d'un item*/
+.item-line
+{
+	user-select: none; /*Désactivation de la selection*/
+    -webkit-user-select: none; /*Prefixe pour opera*/
+    -moz-user-select: none; /*Prefixe pour Mozilla*/
+    -ms-user-select: none; /*Prefixe pour Microsoft*/
+}
+
+/*Style du contenu des items*/
+.note-name
+{
+	color:#48505B;
+	font-weight: bold;
+}
+.note-subject
+{
+	color: #959595;
+	font-size: 0.95em;
+	font-style: italic;
+}
+.note-size
+{
+	color: #BDBDBD;
+	font-size: 0.95em;
+}
+
+/*
+  ____               _                _   
+ / ___| ___   _ __  | |_  ___  _ __  | |_ 
+| |    / _ \ | '_ \ | __|/ _ \| '_ \ | __|
+| |___| (_) || | | || |_|  __/| | | || |_ 
+ \____|\___/ |_| |_| \__|\___||_| |_| \__|
+                                          
+ */
+
+#content-wrap
+{
+	height:100%;
+}
+#content-header
+{
+	padding-bottom: 19px;
+	border-bottom: 1px solid #B0B0B0;
+	box-shadow: 0 2px 0 #F9F9F9;
+}
+
+#content-body
+{
+    height: -moz-calc(100% - 60px);
+    height: -webkit-calc(100% - 60px);
+    height: -o-calc(100% - 60px);
+    height: calc(100% - 60px);
+	padding-top: 5px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+#content-name
+{
+	font-family: 'Kaushan Script', cursive;
+	font-size:1.8em;
+	color:#000000;
+}
+
+#content-subject
+{
+	color: #959595;
+	font-style: italic;
+}
+
+#content-content-citation
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-family : 'Didact Gothic', sans-serif;
+	font-size : 1.4em;
+
+}
+
+#content-content-text
+{
+	margin-top: 20px;
+	font-family : 'Didact Gothic', sans-serif; /*A revoir*/
+	font-size : 1.2em;
+}
+
+#content-author
+{
+	font-family : 'Mr De Haviland', sans-serif;
+	font-size : 4em;
+	margin-bottom: 50px;
+}
+
+#content-dates
+{
+	color: #959595;
+}
+
+.separator-gothic:before
+{
+	content: "————— • —————";
+	margin-top : 20px;
+	margin-bottom: 20px;
+}
+.separator-classic:before
+{
+	content: "————————————————";
+	margin-top : 20px;
+	margin-bottom: 20px;
+}
+
+.CodeMirror
+{
+	height : auto; /*35em*/
+}
+
+/*
+ ____               _      _                             _ 
+|  _ \   __ _  ___ | |__  | |__    ___    __ _  _ __  __| |
+| | | | / _` |/ __|| '_ \ | '_ \  / _ \  / _` || '__|/ _` |
+| |_| || (_| |\__ \| | | || |_) || (_) || (_| || |  | (_| |
+|____/  \__,_||___/|_| |_||_.__/  \___/  \__,_||_|   \__,_|
+
+ */
+
+
+
+/*Home*/
+.logo
+{
+	width: 50px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.pronounced-white
+
+{
+	font-family : 'Didact Gothic', sans-serif; /*A revoir*/
+	font-size : 1.5em;
+	color: #f5f5f5;
+}
