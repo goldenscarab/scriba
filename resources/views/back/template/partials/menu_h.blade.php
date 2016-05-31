@@ -3,7 +3,7 @@
     <!-- Menu administration des utilisateurs -->
     @if(Auth::user()->isAdmin())
         <li>
-            <a href="{{ url('sb_admin') }}"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Admin</a>
+            <a href="{{ url('sb-admin') }}"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Admin</a>
         </li>
     @endif
     <!-- Menu Option -->

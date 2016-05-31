@@ -26,6 +26,7 @@ Route::get('logout', 'Auth\AuthController@logout');
 Route::group(['middleware' => ['auth'], ], function ()
 {
 	Route::get('/', 'Back\HomeController@index');
+	Route::get('sb-admin', 'Back\AdminController@index');
 	Route::get('dashboard', 'Back\DashboardController@index');
 	Route::get('legal-notice', 'Back\HomeController@notice');
 
