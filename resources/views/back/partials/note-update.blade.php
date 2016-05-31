@@ -58,10 +58,10 @@
 				<div class="input-group col-xs-12 col-sm-3">
 					<label class="control-label" for="note_language">Langage</label>
 					<select class="form-control" name="note_language" onChange="setModeCodeMirror(editorCode, $(this).val());">
-				        <option value="php">PHP Html</option>
-				        <option value="js">JavaScript</option>
-				        <option value="css">CSS</option>
-				        <option value="sql">SQL</option>
+				        <option {{ $note->language == "php" ? "selected" : "" }} value="php">PHP Html</option>
+				        <option {{ $note->language == "js" ? "selected" : "" }} value="js">JavaScript</option>
+				        <option {{ $note->language == "css" ? "selected" : "" }} value="css">CSS</option>
+				        <option {{ $note->language == "sql" ? "selected" : "" }} value="sql">SQL</option>
 				    </select>
 				</div>
 				&nbsp;
@@ -106,6 +106,11 @@
 						for (var i = 1 ; i < minLine ; i++) defaultValue += "\n";
 						editorCode.setValue(defaultValue);
 					@endif
+
+					//Init de la coloration syntaxique
+					var language = $('select[name="note_language"]').val(); //Récupèration de la valeur du selecteur
+					setModeCodeMirror(editorCode, language); //Paramétrage de CodeMirror
+
 				</script>
 			@else
 				<p style="color:red">Impossible de créer une nouvelle note</p>
