@@ -33,8 +33,8 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Note');
     }
 
-    public function scopeAllAccess($query)
+    public function isAdmin()
     {
-        return $query->where('admin', true);
+        return $this->admin == true;
     }
 }

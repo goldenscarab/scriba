@@ -1,5 +1,11 @@
 
 <ul id="hbar-menu" class="nav navbar-top-links navbar-right text-right">
+    <!-- Menu administration des utilisateurs -->
+    @if(Auth::user()->isAdmin())
+        <li>
+            <a href="{{ url('sb_admin') }}"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;&nbsp;Admin</a>
+        </li>
+    @endif
     <!-- Menu Option -->
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
