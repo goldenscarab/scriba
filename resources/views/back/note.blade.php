@@ -46,17 +46,17 @@
 
  	<div class="container-fluid max-height">
 		<div class="row max-height">
-			<div id="bloc-note-list" class="col-md-12 col-lg-4 no-margin max-height">
-				<div id="panel-note-list" class="panel panel-default">
+			<div id="col-left" class="col-md-12 col-lg-4 no-margin max-height">
+				<div id="panel-list" class="panel panel-default">
 					<div class="panel-heading">
-						<div id="note-list-header" data-type="{{ $type }}" class="row flexible">
+						<div id="list-header" data-type="{{ $type }}" class="row flexible">
 							<div class="col-xs-4">
 								<h5>{{ $title }}</h5>
 							</div>
 							<div class="input-group custom-search-form col-xs-6">
-			                    <input id="note-search" type="text" class="form-control input-sm" placeholder="Recherche...">
+			                    <input id="list-search" type="text" class="form-control input-sm" placeholder="Recherche...">
 			                    <span class="input-group-btn">
-			                    	<button id="btn-note-search" class="btn btn-default btn-sm" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+			                    	<button id="btn-list-search" class="btn btn-default btn-sm" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
 			                	</span>
 			                </div>
 			                <div class="col-xs-2 align-right">
@@ -65,7 +65,7 @@
 						</div>
 
 					</div>
-					<div id="note-list-content" class="max-height">
+					<div id="list-content" class="max-height">
 						@include('back.partials.notes-list')
 					</div>
 				</div>

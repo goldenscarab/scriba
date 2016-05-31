@@ -149,13 +149,13 @@ html, body
 }
 
 /*Panneau d'édition & de liste*/
-#bloc-note-list
+#col-left
 {
 	z-index: 1;
 }
 
 /*Panneau list des notes*/
-#panel-note-list /*51px + content + 31px*/
+#panel-list /*51px + content + 31px*/
 {
 
 	height: -moz-calc(100% - 100px);
@@ -167,13 +167,13 @@ html, body
 	margin-left: -0px;
 }
 
-#panel-note-list .panel-heading
+#panel-list .panel-heading
 {
 	
 }
 
 /*Hauteur du footer*/
-#panel-note-list .panel-footer
+#panel-list .panel-footer
 {
 	height: 31px;
 	color: #959595;
@@ -184,7 +184,7 @@ html, body
 }
 
 /*Hauteur du body*/
-#panel-note-list .panel-body
+#panel-list .panel-body
 {
 	width: 100%;
 	height: -moz-calc(100% - 82px);

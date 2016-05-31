@@ -2,12 +2,12 @@ $(document).ready(function()
 {
 	// Les écoutes
 	// La recherche
-	$('#btn-note-search').on('click', function()
+	$('#btn-list-search').on('click', function()
 	{
 
 		var note_data = {
-			type: $('#note-list-header').data('type'),
-			search: $('#note-search').val()
+			type: $('#list-header').data('type'),
+			search: $('#list-search').val()
 		}
 
 		//Lancement de la recherche sur le serveur
@@ -18,7 +18,7 @@ $(document).ready(function()
 	});
 	
 	// Ecoute sur les élements de la liste des notes
-	$('#panel-note-list').on('click', '.item-wrapper', function()
+	$('#panel-list').on('click', '.item-wrapper', function()
 	{
 		//On récupère l'ID de l'item sélectionné
 		var id = $(this).data('id');
@@ -31,10 +31,10 @@ $(document).ready(function()
 	});
 
 	//Ecoute sur le bouton ajouté une note
-	$('#panel-note-list').on('click', '#btn-new', function()
+	$('#panel-list').on('click', '#btn-new', function()
 	{
 		//On récupère le nom type de note à créer
-		var type = $('#note-list-header').data('type');
+		var type = $('#list-header').data('type');
 
 		//On envoi une action ajax mode 'get'
 		var form_html = getAjaxAction('new', {type: type})
@@ -150,7 +150,7 @@ function updatePanelList(html)
 	var dom_add = (html != false) ? html : "<span style=\"color:#FF0000;\"> Erreur de traitement...</span>";
 
 	//Ajout dans le dom
-	$('#note-list-content').html(dom_add);
+	$('#list-content').html(dom_add);
 }
 
 function updatePanelContent(html)
