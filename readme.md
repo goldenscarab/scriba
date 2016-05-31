@@ -27,6 +27,10 @@ puis
 
 `vi .env`
 
+enfin, générer une key d'application
+
+`php artisan key:generate`
+
 4. Invoquer les données
 
 `php artisan migrate --seed`
