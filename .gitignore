@@ -3,3 +3,7 @@ taches.todo
 .env.*.php
 .env.php
 .env
+vendor/
+node_modules/
+composer.lock
+.idea
