@@ -4,8 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">Authentification</div>
+            <div class="panel panel-default opacity-5 shadow">
+                <div class="panel-heading">
+                    <img src="{{ url('/img/logo.png') }}" alt="logo">
+                    Authentification
+                </div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {!! csrf_field() !!}

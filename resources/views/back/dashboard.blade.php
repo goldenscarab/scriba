@@ -11,7 +11,7 @@
 @stop
 
 @section('content')
-<div class="panel panel-default panel-background opacity">
+<div class="panel panel-default panel-background opacity-3">
 	<div class="panel-body">
 		<div class="row">
 			<div class="col-lg-3 col-md-6">
