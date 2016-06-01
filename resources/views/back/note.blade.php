@@ -52,7 +52,7 @@
 					<div class="panel-heading">
 						<div id="list-header" data-type="{{ $type }}" class="row flexible">
 							<div class="col-xs-4">
-								<h5>{{ $title }}</h5>
+								<h5 class="theme-scriba">{{ $title }}</h5>
 							</div>
 							<div class="input-group custom-search-form col-xs-6">
 			                    <input id="list-search" type="text" class="form-control input-sm" placeholder="Recherche...">

@@ -14,7 +14,7 @@
 <div class="panel panel-default panel-background opacity">
     <div class="panel-body">
         <br>
-        <h4>
+        <h4 class="theme-scriba">
             Bienvenue sur Scriba le webnote par Goldenscarab
             <img class="logo" src="{{ url('/img/goldenscarab.png') }}" alt="">
         </h4>
