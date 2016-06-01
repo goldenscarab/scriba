@@ -36,6 +36,7 @@
     {!! Html::script('libraries/codemirror/addon/mode/loadmode.js') !!}
     {!! Html::script('libraries/codemirror/mode/meta.js') !!}
     {!! Html::script('libraries/codemirror/mode/sql/sql.js') !!}
+    {!! Html::script('libraries/codemirror/mode/shell/shell.js') !!}
     {!! Html::script('libraries/codemirror/addon/hint/sql-hint.js') !!}
     {!! Html::script('libraries/codemirror/mode/clike/clike.js') !!}
     {!! Html::script('libraries/codemirror/keymap/sublime.js') !!}
@@ -60,7 +61,7 @@
 			                	</span>
 			                </div>
 			                <div class="col-xs-2 align-right">
-			                	<button id="btn-new" class="btn btn-default btn-sm"><i class="fa fa-plus" aria-hidden="true"></i></button>
+			                	<button id="btn-new-note" class="btn btn-default btn-sm"><i class="fa fa-plus" aria-hidden="true"></i></button>
 			                </div>
 						</div>
 

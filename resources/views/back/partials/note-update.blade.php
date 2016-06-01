@@ -62,6 +62,7 @@
 				        <option {{ $note->language == "js" ? "selected" : "" }} value="js">JavaScript</option>
 				        <option {{ $note->language == "css" ? "selected" : "" }} value="css">CSS</option>
 				        <option {{ $note->language == "sql" ? "selected" : "" }} value="sql">SQL</option>
+				        <option {{ $note->language == "sh" ? "selected" : "" }} value="sh">Bash</option>
 				    </select>
 				</div>
 				&nbsp;
@@ -94,6 +95,7 @@
 						var info = CodeMirror.findModeByExtension(ext);
 						var mode = info.mime; //Récupération du type de codage
 
+						//console.log(info);
 						//Paramétrage de CodeMirror
 						editor.setOption("mode", mode);
 					}
