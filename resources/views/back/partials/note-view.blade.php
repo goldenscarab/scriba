@@ -26,7 +26,7 @@
 				{{ $note->content }}
 			</div>
 			<div class="separator-gothic col-xs-12 text-center"></div>
-			<div id="content-author" class="col-xs-3 col-xs-offset-9">
+			<div id="content-author" class="col-xs-12 text-right">
 				{{ $note->author }}
 			</div>
 		@elseif($note->type == 'text')
