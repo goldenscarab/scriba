@@ -1,7 +1,17 @@
 $(document).ready(function()
 {
+
 	// Les écoutes
 	// La recherche
+	$('#list-search').keyup(function(e)
+	{
+		//Détection de la touche entrée
+		if(e.keyCode == 13)
+		{
+			$('#btn-list-search').trigger('click');
+		}
+	});
+
 	$('#btn-list-search').on('click', function()
 	{
 
@@ -18,7 +28,7 @@ $(document).ready(function()
 	});
 	
 	// Ecoute sur les élements de la liste des notes
-	$('#panel-list').on('click', '.item-wrapper', function()
+	$('#panel-list').on('click', '.note-wrap', function()
 	{
 		//On récupère l'ID de l'item sélectionné
 		var id = $(this).data('id');
@@ -31,7 +41,7 @@ $(document).ready(function()
 	});
 
 	//Ecoute sur le bouton ajouté une note
-	$('#panel-list').on('click', '#btn-new', function()
+	$('#panel-list').on('click', '#btn-new-note', function()
 	{
 		//On récupère le nom type de note à créer
 		var type = $('#list-header').data('type');
@@ -127,19 +137,20 @@ $(document).ready(function()
 
 function getAjaxAction(mode, data)
 {
-var html = null;
+	var html = null;
 
-$.ajax(
-{
-url      : 'ajax_action',
-headers	 : { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') },
-type     : 'POST',
-dataType : 'html',
-async    : false, //Default true
-data     : { 'mode': mode, 'data' : data },
-success  : function(result){html = result},
-error    : function(result){html = false},
-});
+	$.ajax(
+	{
+		url      : 'ajax_action',
+		headers	 : { 'X-CSRF-Token' : $('meta[name=_token]').attr('content') },
+		type     : 'POST',
+		dataType : 'html',
+		async    : false, //Default true
+		data     : { 'mode': mode, 'data' : data },
+		success  : function(result){html = result},
+		error    : function(result){html = false},
+	});
+	
 	//Retourne le résultat de la fonction ajax, false si erreur
 	return html;
 }
