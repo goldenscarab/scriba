@@ -12,6 +12,8 @@ return array(
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
     'App\\Http\\Controllers\\Auth\\AuthController' => $baseDir . '/app/Http/Controllers/Auth/AuthController.php',
     'App\\Http\\Controllers\\Auth\\PasswordController' => $baseDir . '/app/Http/Controllers/Auth/PasswordController.php',
+    'App\\Http\\Controllers\\Back\\AdminController' => $baseDir . '/app/Http/Controllers/Back/AdminController.php',
+    'App\\Http\\Controllers\\Back\\DashboardController' => $baseDir . '/app/Http/Controllers/Back/DashboardController.php',
     'App\\Http\\Controllers\\Back\\HomeController' => $baseDir . '/app/Http/Controllers/Back/HomeController.php',
     'App\\Http\\Controllers\\Back\\NoteController' => $baseDir . '/app/Http/Controllers/Back/NoteController.php',
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',

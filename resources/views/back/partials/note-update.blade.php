@@ -1,7 +1,7 @@
 <div id="content-wrap" class="container-fluid">
 	<div class="row">
 		<div id="content-header" class="col-xs-12">
-			<div class="col-md-12 col-lg-5"><h5><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Ajout / Modification</h5></div>
+			<div class="col-md-12 col-lg-5"><h5 class="theme-scriba"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Ajout / Modification</h5></div>
 			<div class="col-md-12 col-lg-7 text-right btn-action">
 				@include('back.partials.note-buttons', ['modify' => 'disabled', 'export' => 'disabled', 'delete' => 'disabled'])
 			</div>

@@ -20,7 +20,7 @@
                 </ul>
             </li>
             <li class="disabled">
-                <a href="#"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp;&nbsp;Gallerie</a>
+                <a href="menu"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp;&nbsp;Gallerie</a>
             </li>
           
 

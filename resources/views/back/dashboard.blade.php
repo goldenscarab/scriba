@@ -109,6 +109,7 @@
 				Dernière citation
 			</div>
 			<div class="panel-body">
+				@if (isset($note_citation))
 				<div id="content-dates" class="col-xs-12 text-right">
 					<p>Modifiée le : {{ $note_citation->updated_at->format('d/m/Y H:i') }} - Crée le : {{ $note_citation->created_at->format('d/m/Y H:i') }}</p>
 					<p></p>
@@ -127,6 +128,9 @@
 				<div id="content-author" class="col-xs-3 col-xs-offset-9">
 					{{ $note_citation->author }}
 				</div>
+				@else
+					<div>Aucune citation enregistée...</div>
+				@endif
 			</div>
 		</div>
 	</div>

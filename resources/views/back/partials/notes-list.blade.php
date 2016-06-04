@@ -1,7 +1,7 @@
 <div class="panel-body">
 	<div class="container-fluid items-list col-xs-12">
 		@forelse($notes as $n)
-			<div class="item-wrapper row" data-id="{{ $n->id }}">
+			<div class="item-wrapper note-wrap row" data-id="{{ $n->id }}">
 				<div class="item-line col-xs-12">
 					<div class="note-name col-xs-7">{{ str_limit($n->name, config('scriba.note-list-len-max')) }}</div>
 					<div class="note-date col-xs-5 text-right">{{ $n->updated_at->diffForHumans() }}</div>

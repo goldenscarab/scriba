@@ -1,5 +1,5 @@
 <?php
 
 return [
-	'note-list-len-max' => 32
+	'note-list-len-max' => 30
 ];

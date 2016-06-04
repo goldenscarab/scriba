@@ -20,6 +20,7 @@ class CreateNotesTable extends Migration
             $table->string('author', 100)->nullable();
             $table->string('subject', 100)->nullable();
             $table->string('language', 30)->nullable();
+            $table->string('category', 30)->default('default');
 
             //Clef étrangère
             $table->integer('user_id')->unsigned(); 
