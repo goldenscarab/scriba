@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::auth();
+//Route::auth();
 
 Route::get('login', 'Auth\AuthController@showLoginForm');
 Route::post('login', 'Auth\AuthController@login');
@@ -27,6 +27,8 @@ Route::group(['middleware' => ['auth'], ], function ()
 {
 	Route::get('/', 'Back\HomeController@index');
 	Route::get('sb-admin', 'Back\AdminController@index');
+	Route::post('sb-admin/save-user', 'Back\AdminController@saveUser');
+	Route::post('sb-admin/ajax-action', 'Back\AdminController@ajaxAction');
 	Route::get('dashboard', 'Back\DashboardController@index');
 	Route::get('legal-notice', 'Back\HomeController@notice');
 
