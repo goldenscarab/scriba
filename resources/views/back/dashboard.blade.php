@@ -104,36 +104,61 @@
 			</div>
 		</div>
 
-		<div class="panel panel-default max-height">
-			<div class="panel-heading">
-				Dernière citation
+		<div class="row">
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Statitiques
+					</div>
+					<div class="panel-body">
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<tr><td>Notes total</td><td class="text-right text-muted small">{{ $nb_notes_total }}&nbsp;Note(s)</td></tr>
+								<tr><td>Taille total</td><td class="text-right text-muted small">{{ number_format($size_all, 0, ',', ' ') }}&nbsp;Octet(s)</td></tr>
+								<tr><td>Dernière note</td><td class="text-right text-muted small">{{ $last_note->updated_at->diffForHumans() }}</td></tr>
+								<tr><td>Type de la note</td><td class="text-right text-muted small">{{ $last_note->type == 'citation' ? "Citation" : $last_note->type == 'text' ? "Texte" : "Code-source" }}</td></tr>
+							</table>
+						</div>
+						
+					</div>
+				</div>
 			</div>
-			<div class="panel-body">
-				@if (isset($note_citation))
-				<div id="content-dates" class="col-xs-12 text-right">
-					<p>Modifiée le : {{ $note_citation->updated_at->format('d/m/Y H:i') }} - Crée le : {{ $note_citation->created_at->format('d/m/Y H:i') }}</p>
-					<p></p>
-				</div>
-				<div id="content-name" class="col-xs-12">
-					{{ $note_citation->name }}
-				</div>
-				<div id="content-subject" class="col-xs-12">
-					{{ $note_citation->subject }}
-				</div>
+			<div class="col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Dernière citation
+					</div>
+					<div class="panel-body ">
+						@if (isset($note_citation))
+						<div id="content-dates" class="col-xs-12 text-right">
+							<p>Modifiée le : {{ $note_citation->updated_at->format('d/m/Y H:i') }} - Crée le : {{ $note_citation->created_at->format('d/m/Y H:i') }}</p>
+							<p></p>
+						</div>
+						<div id="content-name" class="col-xs-12">
+							{{ $note_citation->name }}
+						</div>
+						<div id="content-subject" class="col-xs-12">
+							{{ $note_citation->subject }}
+						</div>
 
-				<div id="content-content-citation" class="col-xs-12">
-					{{ $note_citation->content }}
+						<div id="content-content-citation" class="col-xs-12">
+							{{ $note_citation->content }}
+						</div>
+						<div class="separator-gothic col-xs-12 text-center"></div>
+						<div id="content-author" class="col-xs-3 col-xs-offset-9">
+							{{ $note_citation->author }}
+						</div>
+						@else
+							<div>Aucune citation enregistée...</div>
+						@endif
+					</div>
 				</div>
-				<div class="separator-gothic col-xs-12 text-center"></div>
-				<div id="content-author" class="col-xs-3 col-xs-offset-9">
-					{{ $note_citation->author }}
-				</div>
-				@else
-					<div>Aucune citation enregistée...</div>
-				@endif
 			</div>
+			
 		</div>
 	</div>
+
+		
 </div>
 
 	
