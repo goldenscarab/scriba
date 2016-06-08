@@ -47,26 +47,14 @@ class AdminController extends Controller
 
     public function saveUser()
     {
-        $user_data = input::all();
+        $user_data = Input::all();
 
-        //On vérifie s'il s'agit d'une modification ou d'une création
-        if(isset($user_data['id']))
-        {
-            $validator = Validator::make($user_data, [
-                'name'     => 'required|between:5,20|alpha',
-                'password' => 'required|confirmed|min:6|',
-                'email'    => 'required|email|max:255|'
-            ]);
-        }
-        else
-        {
-            $validator = Validator::make($user_data, [
-                'name'     => 'required|between:5,20|alpha',
-                'password' => 'required|confirmed|min:6|',
-                'email'    => 'required|email|max:255|unique:users'
-            ]);
-        }
-        
+        //Création de la validation des champs
+        $validator = Validator::make($user_data, [
+            'name'     => 'required|between:3,20',
+            'password' => 'required|confirmed|min:6',
+            'email'    => 'required|email|max:255|unique:users,email,'.Input::get('id')
+        ]);
 
         // Si erreur de validation...
         if ($validator->fails()) 
