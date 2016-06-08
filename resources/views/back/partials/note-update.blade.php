@@ -46,9 +46,7 @@
 				    CKEDITOR.config.language = 'fr';
 				    CKEDITOR.config.height = 370;
 				    CKEDITOR.config.contentsCss = ['/libraries/bootstrap/css/bootstrap.min.css', '/libraries/ckeditor/contents.css']; //Style dans l'éditeur
-
-					var map = CodeMirror.keyMap.sublime;
-					var area_editor = null;
+				    CKEDITOR.config.protectedSource.push(/<i[^>]*><\/i>/g); //Pour ne pas filtrer les tags fa fa
 
 					CKEDITOR.replace('editor-text');
 				</script>
@@ -70,6 +68,8 @@
 					<textarea id="editor-source" class="form-control" rows="50" name="note_content" placeholder="Contenu Code Source">{{ $note->content or "" }}</textarea>
 				</div>
 				<script>
+					var map = CodeMirror.keyMap.sublime;
+
 					//Paramétrage de la boite de saisie de code (CodeMirror)
 					var editorCode = CodeMirror.fromTextArea(document.getElementById("editor-source"),
 					{

@@ -24,7 +24,7 @@ class NoteController extends Controller
 {
     public function __construct()
     {
-        Carbon::setLocale('fr');
+        
     }
 
     public function citation()
@@ -232,7 +232,7 @@ class NoteController extends Controller
             
             //Décodage du fichier d'import
             $notes_import = json_decode($data_json);
-            dd($notes_import);
+            //dd($notes_import);
 
 
             //Ajout de la validation
