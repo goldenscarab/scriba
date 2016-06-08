@@ -108,15 +108,19 @@
 			<div class="col-md-4">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						Statitiques
+						Statistiques
 					</div>
 					<div class="panel-body">
 						<div class="table-responsive">
 							<table class="table table-hover">
-								<tr><td>Notes total</td><td class="text-right text-muted small">{{ $nb_notes_total }}&nbsp;Note(s)</td></tr>
-								<tr><td>Taille total</td><td class="text-right text-muted small">{{ number_format($size_all, 0, ',', ' ') }}&nbsp;Octet(s)</td></tr>
-								<tr><td>Dernière note</td><td class="text-right text-muted small">{{ $last_note->updated_at->diffForHumans() }}</td></tr>
-								<tr><td>Type de la note</td><td class="text-right text-muted small">{{ $last_note->type == 'citation' ? "Citation" : $last_note->type == 'text' ? "Texte" : "Code-source" }}</td></tr>
+								@if(isset($last_note))
+									<tr><td>Notes total</td><td class="text-right text-muted small">{{ $nb_notes_total}}&nbsp;Note(s)</td></tr>
+									<tr><td>Taille total</td><td class="text-right text-muted small">{{ number_format($size_all, 0, ',', ' ') }}&nbsp;Octet(s)</td></tr>
+									<tr><td>Dernière note</td><td class="text-right text-muted small">{{ $last_note->updated_at->diffForHumans()}}</td></tr>
+									<tr><td>Type de la note</td><td class="text-right text-muted small">{{ $last_note->type == 'citation' ? "Citation" : $last_note->type == 'text' ? "Texte" : "Code-source" }}</td></tr>
+								@else
+									<tr><td class="text-right text-muted small">Aucune note enregistrée</td></tr>
+								@endif
 							</table>
 						</div>
 						
