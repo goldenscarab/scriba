@@ -5,11 +5,11 @@
     <div class="row">
         <div class="panel panel-default opacity">
             <div class="panel-heading">
-                <h5 class="text-danger">Ouups, erreur 404</h5>
+                <h5 class="text-danger">Ouups, erreur 500</h5>
             </div>
             <div class="panel-body">
                 <p>
-                    La page demandée n'existe pas !! <br> <br>
+                    Une erreur interne est survenue !! <br> <br>
                     Retour à la page d'accueil : 
                     <a href="{{ url('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a>
                 </p>
