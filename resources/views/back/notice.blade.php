@@ -19,7 +19,7 @@
             <img class="logo" src="{{ url('/img/goldenscarab.png') }}" alt="">
         </h4>
         <p class="pronounced-white">
-            Gardez près de vous vos précieuse note sous 3 formats principaux : 
+            Gardez près de vous vos précieuses notes sous 3 formats principaux : 
         </p>
         <ul class="pronounced-white">
             <li>Note Citation</li>

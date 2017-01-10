@@ -8,10 +8,10 @@
                 <h5 class="text-danger">Ouups, erreur 404</h5>
             </div>
             <div class="panel-body">
-                <p>
+                <p class="pronounced-white">
                     La page demandée n'existe pas !! <br> <br>
                     Retour à la page d'accueil : 
-                    <a href="{{ url('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <a class="pronounced-white" href="{{ url('/') }}"><i class="fa fa-home" aria-hidden="true"></i></a>
                 </p>
             </div>
         </div>

@@ -148,11 +148,45 @@ class NoteController extends Controller
                     break;
                 case 'search':
                     $type = Input::get('data.type');
-                    $search = Input::get('data.search');
+                    $search = strtolower(Input::get('data.search'));
 
-                    $notes = Note::userId(Auth::user()->id)->type($type)->search($search)->orderBy('updated_at', 'desc')->get();
+                    $notes = Note::userId(Auth::user()->id)->type($type)->orderBy('updated_at', 'desc')->get();
+                    
+                    //$notes = Note::userId(Auth::user()->id)->type($type)->search($search)->orderBy('updated_at', 'desc')->get();
+                    
+                    //Création d'un collectionneur de résultat
+                    $result = collect([]);
+                    $nb = 0;
+                    
+                    if($search != "")
+                    {
+                        //Parcours de chaque note pour forcer le décryptage
+                        foreach ($notes  as $note) 
+                        {
+                           //Décryptage des données de la base
+                           $name    = strtolower($note->name);
+                           $subject = strtolower($note->subject);
+                           $content = strtolower($note->content);
+                           $author  = strtolower($note->author);
 
-                    return view('back.partials.notes-list')->with('notes', $notes);
+                           //Recherche dans les données
+                           if (str_contains($name, $search) ||
+                               str_contains($subject, $search) ||
+                               str_contains($content, $search) ||
+                               str_contains($author, $search) )
+                            {
+                                //Ajout de l'élément trouvé
+                                $result->put($nb,  $note);
+                                $nb++;
+                            }
+                        }
+                    }
+                    else //Si pas d'élément de recherche, on affiche tout
+                    {
+                        $result = $notes;
+                    }
+                    
+                    return view('back.partials.notes-list')->with('notes', $result);
                     break;
 
                 default:

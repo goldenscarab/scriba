@@ -3,13 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
 	<title>Scriba</title>
-	<meta name="description" content="">
-	<meta name="robots" content="noindex, nofollow, nodp, nocache, notranslate">	
+	<meta name="description" content="">	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noindex, nofollow, nodp, notranslate">
 	<meta name="_token" content="{!! csrf_token() !!}"/>
-	<link type="image/x-icon" href="/favicon.ico" rel="icon"> 
+	<link type="image/x-icon" href="/favicon.ico" rel="icon">
 	@yield('head')
 	
 	<!-- Bootstrap -->
